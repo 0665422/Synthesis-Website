@@ -1,0 +1,61 @@
+﻿* {
+    box-sizing: border-box;
+    margin: 0px;
+}
+
+body {
+}
+
+#window {
+    visibility: visible;
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: black;
+    top: 110px;
+    z-index: 1;
+}
+
+#nav-title {
+    font-size: 26px;
+}
+
+.nav-link {
+    font-size: 20px;
+    margin-left: 30px;
+}
+
+.jumbotron {
+    height: 400px;
+    /*background-image: url("assets/house1.jpg")*/
+}
+
+.page-title {
+    text-align: center;
+    font-size: 74px;
+    margin: 80px 0 50px 0;
+    min-width: 300px;
+}
+
+.page-description {
+    margin: 40px 20%;
+    min-width: 300px;
+    text-align: center;
+    font-size: 26px;
+}
+
+.article-pic {
+    margin: 0 24%;
+    width: 52%;
+}
+
+.timeline {
+    text-align: center;
+    height: 200px;
+}
+
+.timeline-line {
+    width: 20px;
+    height: inherit;
+    background-color: red;
+    position: absolute;
+}
