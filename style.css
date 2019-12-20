@@ -50,7 +50,7 @@ body {
 
 .timeline {
     text-align: center;
-    height: 200px;
+    height: 1000px;
 }
 
 .timeline-line {
@@ -58,4 +58,35 @@ body {
     height: inherit;
     background-color: red;
     position: absolute;
+    margin-top: 20px;
+}
+
+.event {
+    position: relative;
+    margin-top: 90px;
+    text-align: right;
+    z-index: 2;
+}
+
+.text {
+    display: inline-block;
+}
+
+.text p {
+    max-width: 300px;
+}
+
+.circle {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+}
+
+.date {
+    display: inline-block;
+    position: absolute;
+    font-size: 30px;
+    top: 0;
+    right: 0;
+    vertical-align: baseline;
 }
