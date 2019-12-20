@@ -61,32 +61,46 @@ body {
     margin-top: 20px;
 }
 
-.event {
-    position: relative;
-    margin-top: 90px;
+#event {
+    /*background-color: orange;*/
     text-align: right;
-    z-index: 2;
 }
 
-.text {
-    display: inline-block;
+#media {
+    /*background-color: darkred;*/
+    text-align: center;
+    padding-top: 8px;
 }
 
-.text p {
-    max-width: 300px;
+#media img {
 }
 
-.circle {
-    display: inline-block;
-    position: absolute;
-    top: 0;
+#text {
+    /*background-color: aqua;*/
+    width: 260px;
 }
 
-.date {
-    display: inline-block;
-    position: absolute;
-    font-size: 30px;
-    top: 0;
-    right: 0;
-    vertical-align: baseline;
+#text p {
+    padding-right: 20px;
+}
+
+#text h3 {
+    /*background-color: burlywood;*/
+    padding-right: 20px;
+}
+
+#circle {
+    /*background-color: greenyellow;*/
+    padding-top: 8px;
+}
+
+#date {
+    /*background-color: purple;*/
+    padding-top: 8px;
+}
+
+#date h3 {
+    /*background-color: green;*/
+    padding-left: 20px;
+
 }

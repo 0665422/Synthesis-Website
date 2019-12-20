@@ -1,0 +1,38 @@
+﻿* {
+    box-sizing: border-box;
+    margin: 0px;
+}
+
+#event {
+    background-color: orange;
+}
+
+#media {
+    background-color: darkred;
+}
+
+#media img {
+}
+
+#text {
+    background-color: aqua;
+    width: 220px;
+}
+
+#text p {
+
+}
+
+#circle {
+    background-color: greenyellow;
+}
+
+#date {
+    background-color: purple;
+    font-size: 30px;
+}
+
+#date h3 {
+    background-color: green;
+    width: auto;
+}
