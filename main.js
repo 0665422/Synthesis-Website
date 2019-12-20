@@ -14,11 +14,17 @@ function keepTimelineCentered() {
 // aligns the event
 function eventPosition() {
     $('#event').each(function () {
-        //baseline CSS
-        $(this).css("text-align", "right");
-        $("#event #text p").css("padding-right", "20px");
-        $("#event #text h3").css("padding-right", "20px");
-        $("#event #date h3").css("padding-left", "20px");
+        //baseline CSS (for flexibiliy)
+        //for left
+        $(".left").css("text-align", "right");
+        $(".left #text p").css("padding-right", "20px");
+        $(".left #text h3").css("padding-right", "20px");
+        $(".left #date h3").css("padding-left", "20px");
+        //for right
+        $(".right").css("text-align", "left");
+        $(".right #text p").css("padding-left", "20px");
+        $(".right #text h3").css("padding-left", "20px");
+        $(".right #date h3").css("padding-right", "20px");
 
         var circleWidth = $("#event #circle svg").width();
         var dateWidth = $("#event #date").width();

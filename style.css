@@ -63,6 +63,12 @@ body {
 
 #event {
     /*background-color: orange;*/
+    margin-bottom: 100px;
+}
+
+.right {
+    display: flex !important; 
+    justify-content: flex-end !important;
 }
 
 #media {
