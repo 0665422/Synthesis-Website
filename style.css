@@ -50,11 +50,11 @@ body {
 
 .timeline {
     text-align: center;
-    height: 1000px;
+    height: 10000px;
 }
 
 .timeline-line {
-    width: 20px;
+    width: 2%;
     height: inherit;
     background-color: red;
     position: absolute;
@@ -73,12 +73,41 @@ body {
 
 #media {
     /*background-color: darkred;*/
+    position: relative;
     text-align: center;
     padding-top: 8px;
 }
 
-#media img {
+@keyframes cf3FadeInOut {
+    0% {
+        opacity: 1;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
 }
+
+#media img {
+    position: absolute;
+}
+
+#media img.top {
+    animation-name: cf3FadeInOut;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 4s;
+    animation-direction: alternate;
+}
+
 
 #text {
     /*background-color: aqua;*/
@@ -90,12 +119,12 @@ body {
 
 #text h3 {
     /*background-color: burlywood;*/
-
 }
 
 #circle {
     /*background-color: greenyellow;*/
     padding-top: 8px;
+    width: 4%;
 }
 
 #date {

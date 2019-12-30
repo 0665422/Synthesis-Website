@@ -26,7 +26,7 @@ function eventPosition() {
         $(".right #text h3").css("padding-left", "20px");
         $(".right #date h3").css("padding-right", "20px");
 
-        var circleWidth = $("#event #circle svg").width();
+        var circleWidth = $("#event #circle img").width();
         var dateWidth = $("#event #date").width();
         var textWidth = $("#event #text").width();
 
@@ -39,15 +39,18 @@ function eventPosition() {
         //creates whitespace on sides
         var imgWidth = mediaWidth - 2 * mediaPadding;
         $("#event #media img").css("width", imgWidth + "px");
+        $("#event #media img").css("left", mediaPadding + "px"); //"left" acts as margin, but for absolute positioned element
+        //same for videos
+        $("#event #media video").css("width", imgWidth + "px");
+        $("#event #media video").css("left", mediaPadding + "px");
 
-        var yearFontSize = circleWidth - 8;
+        var yearFontSize = circleWidth - 14;
         $("#event #date h3").css("font-size", yearFontSize + "px");
         var titleFontSize = yearFontSize + 8;
         $("#event #text h3").css("font-size", titleFontSize + "px");   
     });
     
 }
-
 
     
 
@@ -61,4 +64,3 @@ $("document").ready(function () {
         eventPosition();
     });
 });
-
