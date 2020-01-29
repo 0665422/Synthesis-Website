@@ -26,13 +26,28 @@ body {
 
 .jumbotron {
     height: 400px;
-    /*background-image: url("assets/house1.jpg")*/
+    background-image: url("assets/BANNER.jpg");
+    background-size: cover;
+    color: #c70000;
+}
+
+.jumbotron h1 {
+    font-weight: bold;
+    display: inline;
+    background-color: rgba(0, 0, 0, 0.2);
 }
 
 .page-title {
     text-align: center;
     font-size: 74px;
     margin: 80px 0 50px 0;
+    min-width: 300px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 44px;
+    margin: 100px 0 30px 0;
     min-width: 300px;
 }
 
@@ -43,6 +58,13 @@ body {
     font-size: 26px;
 }
 
+.section-description {
+    margin: 40px 20%;
+    min-width: 300px;
+    text-align: center;
+    font-size: 24px;
+}
+
 .article-pic {
     margin: 0 24%;
     width: 52%;
@@ -50,12 +72,11 @@ body {
 
 .timeline {
     text-align: center;
-    height: 10000px;
 }
 
 .timeline-line {
     width: 2%;
-    height: inherit;
+    height: 6000px;
     background-color: red;
     position: absolute;
     margin-top: 20px;
@@ -134,4 +155,190 @@ body {
 
 #date h3 {
     /*background-color: green;*/
+}
+
+.analysis {
+    padding: 100px 0 200px 0;
+}
+
+.analysis > div {
+    margin: 4% 10% 0 10%;
+    
+}
+.analysis > div > p {
+    font-size: 22px;
+    margin-top: 20px;
+}
+
+.analysis h3 {
+    display: inline-block;
+    margin-right: 50px;
+    font-size: 34px;
+    font-weight: bold;
+}
+
+.analysis h2 {
+    display: block;
+    text-align: center;
+    font-size: 42px;
+    font-weight: bold;
+}
+
+.agree {
+    background-color: rgba(0, 255, 0, 0.3);
+}
+
+.disagree {
+    background-color: rgba(255, 0, 0, 0.3);
+}
+
+/*Synthesis*/
+.synthesis-image {
+    text-align: center;
+    width: 58%;
+    margin: 0 21%;
+}
+
+.support {
+    display: block;
+    text-align: center;
+    font-size: 20px;
+}
+
+.support > strong {
+    color: darkorange;
+}
+
+
+/*Spedometer*/
+
+.gauge {
+    /*width and height set by JS*/
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+}
+
+.needle {
+    /*width, height, borders, box shadow, bottom, left set by JS*/
+    background: #15222e;
+    border-bottom-left-radius: 100%;
+    border-top-left-radius: 100%;
+    position: absolute;
+}
+
+
+/*Times*/
+
+.anim-times-logos {
+    animation: times-logos;
+    transform-origin: 100% 4px;
+    animation-duration: 1.6s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+.anim-times-pathos {
+    animation: times-pathos;
+    transform-origin: 100% 4px;
+    animation-duration: 1.6s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+.anim-times-ethos {
+    animation: times-ethos;
+    transform-origin: 100% 4px;
+    animation-duration: 1.6s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+/*Post*/
+
+.anim-post-logos {
+    animation: post-logos;
+    transform-origin: 100% 4px;
+    animation-duration: 1.6s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+.anim-post-pathos {
+    animation: post-pathos;
+    transform-origin: 100% 4px;
+    animation-duration: 1.6s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+.anim-post-ethos {
+    animation: post-ethos;
+    transform-origin: 100% 4px;
+    animation-duration: 1.6s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+
+/*Times*/
+@-webkit-keyframes times-logos {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(40deg);
+    }
+}
+
+@-webkit-keyframes times-pathos {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(164deg);
+    }
+}
+
+@-webkit-keyframes times-ethos {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(160deg);
+    }
+}
+
+
+/*Post*/
+@-webkit-keyframes post-logos {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(100deg);
+    }
+}
+
+@-webkit-keyframes post-pathos {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(136deg);
+    }
+}
+
+@-webkit-keyframes post-ethos {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(128deg);
+    }
 }

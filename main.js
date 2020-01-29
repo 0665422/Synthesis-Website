@@ -43,24 +43,56 @@ function eventPosition() {
         //same for videos
         $("#event #media video").css("width", imgWidth + "px");
         $("#event #media video").css("left", mediaPadding + "px");
-
-        var yearFontSize = circleWidth - 14;
+        //date and title alignment
+        var yearFontSize = circleWidth * 0.56;
         $("#event #date h3").css("font-size", yearFontSize + "px");
-        var titleFontSize = yearFontSize + 8;
-        $("#event #text h3").css("font-size", titleFontSize + "px");   
+        var yearPadding = (circleWidth - $("#event #text h3").height()) / 2;
+        $("#event #date h3").css("padding-top", yearPadding + "px");
+        var titleFontSize = yearFontSize * 1.3;
+        $("#event #text h3").css("font-size", titleFontSize + "px"); 
+        $(".trump-call").css("top", $(".zelensky-call").height());
+        //timeline height
+        $(".timeline-line").css("height", ($(".timeline").height() + 100) + "px")
     });
     
 }
 
-    
+//makes speedometer responsive to the change of the width.
+function speedometerFlexibility() {
+    var gauge_width = 160;
+
+    $(".gauge").css("width", gauge_width + "px");
+    $(".gauge").css("height", (gauge_width / 2) + "px");
+
+    $(".needle").css("width", (gauge_width * 0.39) + "px");
+    $(".needle").css("height", (gauge_width * 0.035) + "px");
+    $(".needle").css("border-bottom-right-radius", (gauge_width * 0.025) + "px");
+    $(".needle").css("border-top-right-radius", (gauge_width * 0.035) + "px");
+    $(".needle").css("bottom", (gauge_width * 0.02) + "px");
+    $(".needle").css("left", (gauge_width * 0.1) + "px");
+    $(".needle").css("box-shadow", "0 " + (gauge_width * 0.01) + "px " + (gauge_width * 0.01) + "px " + (gauge_width * 0.005) + "px rgba(0, 0, 0, 0.38)");
+}
+
+function identifySpeedometer(target) {
+        console.log("anim-" + $("body").attr('class') + "-" + $(target).parents().attr("class"));
+        var animation = "anim-" + $("body").attr('class') + "-" + $(target).parents().attr("class");
+        $($(target).children().eq(1)).addClass(animation);
+}
+
 
 $("document").ready(function () {
 
     keepTimelineCentered();
     eventPosition();
+    speedometerFlexibility();
+    identifySpeedometer($(".gauge")[0]);
+    identifySpeedometer($(".gauge")[1]);
+    identifySpeedometer($(".gauge")[2]);
+    
 
     $(window).resize(function () {
         keepTimelineCentered();
         eventPosition();
+        speedometerFlexibility();
     });
 });

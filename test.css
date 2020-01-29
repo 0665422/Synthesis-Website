@@ -1,38 +1,41 @@
-﻿* {
-    box-sizing: border-box;
-    margin: 0px;
+﻿.gauge {
+    width: 200px;
+    height: 100px;
+    position: relative;
+    overflow: hidden;
 }
 
-#event {
-    background-color: orange;
+.needle {
+    width: 78px;
+    height: 7px;
+    background: #15222e;
+    border-bottom-left-radius: 100%;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 100%;
+    border-top-right-radius: 5px;
+    position: absolute;
+    bottom: 4px;
+    left: 20px;   
+    
+    box-shadow: 0 2px 2px 1px rgba(0, 0, 0, 0.38);
 }
 
-#media {
-    background-color: darkred;
+
+.anim-times-logos {
+    animation: times-logos;
+    transform-origin: 100% 4px;
+    animation-duration: 1.6s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
 }
 
-#media img {
-}
 
-#text {
-    background-color: aqua;
-    width: 220px;
-}
+@-webkit-keyframes times-logos {
+    from {
+        transform: rotate(0);
+    }
 
-#text p {
-
-}
-
-#circle {
-    background-color: greenyellow;
-}
-
-#date {
-    background-color: purple;
-    font-size: 30px;
-}
-
-#date h3 {
-    background-color: green;
-    width: auto;
+    to {
+        transform: rotate(40deg);
+    }
 }
